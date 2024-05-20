@@ -13,8 +13,8 @@ body {
 .calculator--container {
   border-radius: 20px;
   padding: 10px;
-  width: 300px;
-  height: 400px;
+  width: 330px;
+  height: 340px;
   background-color: #d3d3d333;
   display: flex;
   flex-direction: column;
@@ -26,12 +26,7 @@ body {
   color: white;
   background-color: black;
   width: 100%;
-  height: 30px;
-}
-.calculator--buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+  height: 70px;
 }
 
 .button {
@@ -44,14 +39,15 @@ body {
   padding: 10px;
   border-radius: 10px;
   text-align: center;
+  user-select: none;
 }
 
 .calculator--buttons {
   display: grid;
   width: auto;
   height: auto;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 5px;
 }
 
@@ -59,10 +55,22 @@ body {
   background-color: rgb(247, 80, 30);
   color: white;
 }
+.button--numbers:hover {
+  background-color: rgb(255, 131, 94);
+}
+.button--numbers:active {
+  background-color: rgb(219, 61, 13);
+}
 
 .button--operations {
-  background-color: #42424211;
+  background-color: #33333311;
   color: black;
+}
+.button--operations:hover {
+  background-color: #74747411;
+}
+.button--operations:active {
+  background-color: #24242411;
 }
 
 .add {
@@ -71,23 +79,28 @@ body {
 }
 
 .substract {
-  grid-column: 4/5;
-  grid-row: 2/3;
+  grid-column: 5/6;
+  grid-row: 1/2;
 }
 
 .multiply {
   grid-column: 4/5;
-  grid-row: 3/4;
+  grid-row: 2/3;
 }
 
 .divide {
-  grid-column: 4/5;
-  grid-row: 4/5;
+  grid-column: 5/6;
+  grid-row: 2/3;
 }
 
 .equal {
   grid-column: 4/5;
-  grid-row: 5/6;
+  grid-row: 3/4;
+}
+
+.CE {
+  grid-column: 5/6;
+  grid-row: 3/4;
 }
 
 .zero {
